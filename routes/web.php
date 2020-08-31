@@ -20,37 +20,37 @@ Route::get('/', function () {
 
 // Creo nuova route 'students'
 //   --> la View conterrà una lista di studenti
-Route::get('/students', function () {
+Route::get('/students', 'StudentController@index');
 
-    // Creo array di array contenente l'elenco degli studenti
-    $students = [
+    // // Creo array di array contenente l'elenco degli studenti
+    // $students = [
 
-        [
-            'nome' => 'Sara',
-            'cognome' => 'Bianchi',
-            'voto' => 8,
-        ],
+    //     [
+    //         'nome' => 'Sara',
+    //         'cognome' => 'Bianchi',
+    //         'voto' => 8,
+    //     ],
 
-        [
-            'nome' => 'Mario',
-            'cognome' => 'Rossi',
-            'voto' => 7,
-        ],
+    //     [
+    //         'nome' => 'Mario',
+    //         'cognome' => 'Rossi',
+    //         'voto' => 7,
+    //     ],
 
-        [
-            'nome' => 'Lisa',
-            'cognome' => 'Verdi',
-            'voto' => 6,
-        ],
-    ];
+    //     [
+    //         'nome' => 'Lisa',
+    //         'cognome' => 'Verdi',
+    //         'voto' => 6,
+    //     ],
+    // ];
 
-    // Return
-    //   --> 1° param : nome route/view
-    //   --> 2° param : array di informazioni
-    //   --> le Keys create diventano variabili in blade
-    //   --> stampo context della View nel relativo file
-    return view('students', [
-        'teacher' => 'Alessandro',
-        'students' => $students,
-    ]);
-});
+    // // Return
+    // //   --> 1° param : nome route/view
+    // //   --> 2° param : array di informazioni
+    // //   --> le Keys create diventano variabili in blade
+    // //   --> stampo context della View nel relativo file
+    // return view('students', [
+    //     'teacher' => 'Alessandro',
+    //     'students' => $students,
+    // ]);
+    
