@@ -23,7 +23,7 @@ Route::get('/', function () {
 Route::get('/students', function () {
 
     // Creo array di array contenente l'elenco degli studenti
-    $arr_students = [
+    $students = [
 
         [
             'nome' => 'Sara',
@@ -48,8 +48,9 @@ Route::get('/students', function () {
     //   --> 1° param : nome route/view
     //   --> 2° param : array di informazioni
     //   --> le Keys create diventano variabili in blade
+    //   --> stampo context della View nel relativo file
     return view('students', [
         'teacher' => 'Alessandro',
-        'students' => $arr_students,
+        'students' => $students,
     ]);
 });
