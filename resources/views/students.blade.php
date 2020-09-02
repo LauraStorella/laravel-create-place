@@ -1,4 +1,5 @@
-@extends('layouts.layout')
+{{-- 1° versione esercizio --}}
+{{-- @extends('layouts.layout')
 
 @section('main_content')
   <h1>Elenco Studenti</h1>
@@ -12,4 +13,21 @@
       <li>Voto: {{ $student['voto'] }}</li>
     </ul>
   @endforeach
-@endsection
+@endsection --}}
+
+
+<h1>Elenco Studenti</h1>
+
+@foreach ($my_students as $my_student)
+  <div>
+    <h3>Nome Studente: {{ $my_student->nome }} {{ $my_student->cognome }}</h3>
+
+    <ul>
+      <li>Descrizione: {{ $my_student->descrizione }}</li>
+      <li>Voto: {{ $my_student->voto }}</li>
+      <li>Classe: {{ $my_student->nome_classe }}</li>
+    </ul>
+  
+  </div>
+    
+@endforeach

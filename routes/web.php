@@ -20,7 +20,7 @@ Route::get('/', function () {
 
 // Creo nuova route 'students'
 //   --> la View conterrà una lista di studenti
-Route::get('/students', 'StudentController@index');
+Route::get('/students', 'StudentController@index')->name('students');
 
     // // Creo array di array contenente l'elenco degli studenti
     // $students = [
